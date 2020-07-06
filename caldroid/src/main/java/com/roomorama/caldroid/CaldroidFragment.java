@@ -25,6 +25,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.antonyt.infiniteviewpager.InfinitePagerAdapter;
@@ -120,8 +121,8 @@ public class CaldroidFragment extends DialogFragment {
     /**
      * Caldroid view components
      */
-    private Button leftArrowButton;
-    private Button rightArrowButton;
+    private ImageButton leftArrowButton;
+    private ImageButton rightArrowButton;
     private TextView monthTitleTextView;
     private GridView weekdayGridView;
     private InfiniteViewPager dateViewPager;
@@ -1261,9 +1262,8 @@ public class CaldroidFragment extends DialogFragment {
                 .findViewById(R.id.calendar_month_year_textview);
 
         // For the left arrow button
-        leftArrowButton = (Button) view.findViewById(R.id.calendar_left_arrow);
-        rightArrowButton = (Button) view
-                .findViewById(R.id.calendar_right_arrow);
+        leftArrowButton = (ImageButton) view.findViewById(R.id.calendar_left_arrow);
+        rightArrowButton = (ImageButton) view.findViewById(R.id.calendar_right_arrow);
 
         // Navigate to previous month when user click
         leftArrowButton.setOnClickListener(new OnClickListener() {
@@ -1446,7 +1446,7 @@ public class CaldroidFragment extends DialogFragment {
      *
      * @author thomasdao
      */
-    public class DatePageChangeListener implements OnPageChangeListener {
+    public class DatePageChangeListener implements ViewPager.OnPageChangeListener {
         private int currentPage = InfiniteViewPager.OFFSET;
         private DateTime currentDateTime;
         private ArrayList<CaldroidGridAdapter> caldroidGridAdapters;

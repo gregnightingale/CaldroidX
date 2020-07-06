@@ -19,8 +19,8 @@
     </declare-styleable>
 
     <!-- Declare stylable attribute for a cell -->
-    <declare-styleable name="Cell" >
-        <attr name="android:textColor" />
-        <attr name="android:background" />
+    <declare-styleable name="Cell">
+        <attr name="android:textColor"/>
+        <attr name="android:background"/>
     </declare-styleable>
 </resources>
